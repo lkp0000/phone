@@ -1,0 +1,68 @@
+.main {
+	min-height: 600px;
+}
+.wrapper {
+	overflow: hidden;
+}
+.liucheng {
+	margin: 30px auto;
+	width: 500px;
+}
+.liucheng div {
+	display: inline;
+	margin: 0px 10px;
+	font-size: 18px;
+}
+.overview {
+	background: #FFFFFF;
+	width: 300px;
+	float: left;
+	height: 300px;
+}
+.overview li {
+	display: block;
+}
+
+
+.menudiv {
+	float: left;
+	width: 399px;
+	height: 300px;
+	border-left: #A8C29F solid 1px;
+	border-right: #A8C29F solid 1px;
+	border-top: 0;
+	background: #fefefe;
+}
+.menudiv div {
+	padding: 15px;
+	line-height: 28px;
+}
+
+
+.forms select,.forms input{
+ margin-bottom: 10px;
+
+
+
+}
+
+
+/*
+.form1,.form2,.form3{
+  padding: 20px 30px 20px 0px;
+  width: 900px;
+  float: left;
+  position: relative;
+
+}
+
+.form1 select{
+	display: block;
+	margin-bottom: 5px;
+	//width: 300px;
+}
+.form1{
+width: 300px;
+	margin: 50px auto 0px auto;
+}
+*/

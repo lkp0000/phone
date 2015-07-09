@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8" />
+		<title></title>
+			
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/dashboard.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		
+	</head>
+<body>
+ 
+	
+	  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="main.html">mendman</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+       	
+          <ul class="nav navbar-nav" id="topnavs">
+     <li class="active" id="nav1" ><a href="#">首页</a></li>
+            <li id="nav2" ><a href="#contact">维修</a></li>
+            <li id="nav3" ><a href="#contact">置换</a></li>
+            <li id="nav4" ><a href="#about">商城</a></li>
+              
+            <li class="dropdown" id="nav567a">
+              <a href="#" id="usernav" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户 <span class="caret"></span></a>
+              <ul class="dropdown-menu" id="nav567">
+                <li  id="nav5" ><a href="#">用户</a></li>
+                <li  id="nav6" ><a href="#">工程师</a></li>
+                <li id="nav7" ><a href="#">管理员</a></li>
+                   </ul>
+            </li>
+            <li id="nav8" ><a href="#about">文章</a></li>
+            <li id="nav9" ><a href="#contact">界面</a></li>
+            <li id="nav10" ><a href="#contact">统计</a></li>
+          </ul>
+        
+         <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">admin <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">个人信息</a></li>
+                <li><a href="#">设置</a></li>
+                 <li role="separator" class="divider"></li>
+               <li><a href="#">退出</a></li>
+                </ul>
+            </li>
+         
+         
+         </ul>  
+        </div>
+      </div>
+   </nav>
+
+	
+	
+	 <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar" id="leftnavs">
+          
+          </ul>
+     </div>
+        <div id="mycontent" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+   </div>
+    </div>
+    </div>
+	 <div class="dialog" id="dialog" style="z-index: 1000000;">
+			<div class="bg">
+				
+			</div>
+	<div class="inner" >
+				<div class="dialog_title">
+				<div id="" align="center" style="font-size: 20px;color: #FFFFFF; line-height:40px;">
+					<span id="title">
+					</span> <img src="img/icon_close.png" onclick="gone();" align="right" style="width: 30px; height: 30px;margin-top: 5px;margin-right: 10px;"/>
+				</div>
+				
+			</div>	<iframe class="dialog_frame" id="frame"></iframe>	</div>	</div>
+	<script src="../js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+
+var navdata=[{top:1,left:[{name:'概览',url:'ajax/overview.html'},{name:'维修订单',url:'ajax/repairorder.html'}]},{top:2,left:[{name:'手机品牌',url:'ajax/brand.html'},{name:'手机型号',url:'ajax/model.html'},{name:'损伤类型',url:'ajax/damagetype.html'},{name:'收费情况',url:'ajax/shoufei.html'},{name:'维修订单',url:'ajax/repairorder.html'}]},{top:3,left:[{name:'置换记录',url:'ajax/zhihuan.html'},{name:'评估管理',url:'ajax/pinggu.html'}]},{top:4,left:[{name:'商品列表',url:'ajax/goods.html'},{name:'交易记录',url:'ajax/jiaoyi.html'},{name:'商品库存',url:'ajax/kucun.html'},{name:'商城活动',url:'ajax/huodong.html'}]},{top:5,left:[{name:'所有用户',url:'ajax/user.html'},{name:'添加用户',url:'ajax/newuser.html'}]},{top:6,left:[{name:'所有工程师',url:'ajax/gcs.html'},{name:'添加工程师',url:'ajax/newgcs.html'}]},{top:7,left:[{name:'所有管理员',url:'ajax/gly.html'},{name:'添加管理员',url:'ajax/newgly.html'},{name:'权限修改',url:'ajax/quanxian.html'}]},{top:8,left:[{name:'所有文章',url:'ajax/article.html'},{name:'新建文章',url:'ajax/newarticle.html'},{name:'文章分类',url:'ajax/fenlei.html'}]},{top:9,left:[{name:'首页轮播图',url:'ajax/indexbanner.html'},{name:'网站模板',url:'ajax/templetes.html'}]},{top:10,left:[{name:'支付方式',url:'ajax/fx_zffs.html'},{name:'销售排行',url:'ajax/fx_xiaoliang.html'},{name:'消费排行',url:'fx_xiaofei'}]},{top:11,left:[{name:'11',url:'aa.com'},{name:'11',url:'bbb.com'}]}];
+var obj = eval (navdata);
+function leftnav(topnav){
+	$("#leftnavs").empty();
+$("#leftnavs").append("<li id='leftnav0' class='active'><a href='#'>"+obj[topnav].left[0].name+"</a></li>");
+var t=obj[topnav].left[0].url.toString();
+$("#leftnav0").click(function(t){
+   	return function(){
+htmlobj=$.ajax({url:t,async:false});
+$("#mycontent").html(htmlobj.responseText);
+}
+}(t));
+ 
+for (var i=1;i<obj[topnav].left.length;i++)
+{
+ var t=obj[topnav].left[i].url.toString();
+ $("#leftnavs").append("<li id='leftnav"+i+"' ><a href='#'>"+obj[topnav].left[i].name+"</a></li>");
+ $("#leftnav"+i).click(function(t){
+return function(){
+htmlobj=$.ajax({url:t,async:false});
+$("#mycontent").html(htmlobj.responseText);
+  return false;
+}
+
+
+ }(t));
+}
+
+}
+
+	function gone(){
+	document.getElementById("dialog").style.display="none";
+	}
+	function visible(mylink,title){
+		document.getElementById("title").innerHTML=title;
+			document.getElementById("frame").src=mylink;
+	document.getElementById("dialog").style.display="block";
+	
+	}
+ 
+ 
+$(document).ready(function(){
+    // alert(config[1].toString());
+   
+for (var i=1;i<11;i++){
+	
+		$("#nav"+i).click(function(j){
+ return function(){
+ 	 $("#topnavs").children().removeClass("active");
+ 	  $("#nav567").children().removeClass("active");
+ 	 $("#nav567a").removeClass("open");
+ 
+ 	$("#nav"+j).addClass("active");
+leftnav(j-1);
+
+$("#leftnav0").click();
+
+
+                return false;
+           }
+	}(i));
+}
+$("#usernav").click(function(j){
+	
+	 $("#topnavs").children().removeClass("active");
+ });
+
+ leftnav(0);
+ 
+
+ 
+ 
+ 
+});
+function setloadajax(id,myurl){
+	
+//htmlobj=$.ajax({url:myurl,async:false});
+//$("#mycontent").html(htmlobj.responseText);
+
+
+}
+</script>
+
+	</body>
+
+</html>

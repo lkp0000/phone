@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>徽夫</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/repair.css" />
+
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="wrapper">
+				<div class="logo">
+					<a href="index.html" style="color: #FFFFFF;">徽夫</a>
+				</div>
+				<div class="navs">
+					<ul>
+						<li><a href="index.html">首页</a>
+						</li>
+						<li><a href="repair.html">维修</a>
+						</li>
+						<li><a href="store.html">手机商城</a>
+						</li>
+						<li><a href="exchange.html">以旧换新</a>
+						</li>
+						<li><a href="user.html">订单查询</a>
+						</li>
+
+						<li><a href="about.html">关于我们</a>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="logins">
+					<div class="login">
+						<a href="login.html">登录</a>
+					</div>
+					<div class="signup">
+						<a href="signup.html">注册</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="main">
+
+			<div class="wrapper">
+
+				<div class="liucheng">
+					<div class="step1">
+						选择手机
+					</div>
+					<div class="step2">
+						故障类型
+					</div>
+					<div class="step3">
+						联系方式
+					</div>
+					<div class="step4">
+						在线支付
+					</div>
+					<div class="step5">
+						完成订单
+					</div>
+
+				</div>
+				<div class="overview" style="display: none;">
+					<div class="title">
+						我的订单
+					</div>
+					<ul>
+						<li>产品</li>
+						<li>品牌</li>
+						<li>型号</li>
+						<li>故障类型</li>
+
+					</ul>
+
+				</div>
+
+<div class="forms" style="width: 600px;float: right;">
+					<form action="" method="post"  class="form1">
+		<div id="form1">
+						
+								<select name="brand" id="pinpai" class="form-control">
+									<option value="0">手机品牌</option>
+									</select>
+								<select name="model" id="xinghao" class="form-control">
+									<option value="0">型号</option>
+									</select>
+								<select name="wxtype"  class="form-control">
+									<option value="">损坏部位</option>
+									<option value="">屏幕损坏</option>
+									<option value="">手机进水</option>
+									<option value="">按键不灵或无反应</option>
+									<option value="">开不开机</option>
+									<option value="">电池特别不耐用</option>
+
+								</select>
+								<select name="color" class="form-control">
+									<option value="">颜色</option>
+									<option value="">黑色</option>
+									<option value="">白色</option>
+									<option value="">蓝色</option>
+									<option value="">灰色</option>
+									<option value="">金色</option>
+
+								</select>
+
+								<input class="btn btn-lg btn-primary btn-block" type="button" onclick="setTab(2);return false;" value="下一步" />
+						
+
+						</div>
+						<div id="form2" style="display:none;">
+								<select name="color" class="form-control">
+									<option value="">损坏部位</option>
+									<option value="">屏幕</option>
+									<option value="">电池</option>
+									<option value="">按键</option>
+									<option value="">摄像头</option>
+									<option value="">网络故障</option>
+									<option value="">进水</option>
+
+								</select>
+
+								<select name="color" class="form-control">
+									<option value="">损坏情况</option>
+									<option value="">屏幕摔碎</option>
+									<option value="">触摸屏不灵敏</option>
+									<option value="">触摸屏碎了</option>
+
+								</select>
+
+								<input style="height: 100px;margin-bottom: 20px;" class="form-control" placeholder="请描述您的手机受损情况" type="text" name="phonetype" id="phonetype" value="" />
+
+								<input class="btn btn-lg btn-primary" style="width: 40%;" type="button" onclick="setTab(1);return false;" value="上一步" />
+								<input class="btn btn-lg btn-primary" style="width: 40%;" type="button" onclick="setTab(3);return false;" value="下一步" />
+						
+						</div>
+						<div id="form3" style="display:none;">
+						
+								<input type="text" name="" class="form-control"  value="" placeholder="姓名" />
+								<input type="text" name="" class="form-control"  value="" placeholder="手机号" />
+								<div>
+					<input style="float: left;width: 180px;" type="text" id="code" class="form-control" placeholder="验证码">
+					<button class="btn btn-primary" id="getcode" style="margin-top: 5px; float: left;width: 100px;margin-left: 15px;" onclick="return false;">获取验证码</button>
+
+				</div>
+				<span id="">
+				<select name="color" class="form-control">
+							<option value="">省份</option>
+						
+						</select>
+					<select name="color" class="form-control">
+							<option value="">城市</option>
+					
+						</select>
+					<select name="color" class="form-control">
+							<option value="">地区</option>
+					
+						</select>
+	
+</span>
+								<input type="text" name="" class="form-control" value="" placeholder="详细地址" />
+								<input type="text" name="" class="form-control"  value="" placeholder="备注" />
+
+								<input  class="btn btn-lg btn-primary btn-block" type="button" value="提交订单" />
+						
+
+						</div>
+							</form>
+					</div>
+		
+
+				<div class="page_vieworder">
+					订单详情
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="footer">
+			<div class="wrapper" style="height: 230px;">
+				<div class="foot1">
+					<div class="foots-title">使用指南
+					</div>
+
+					<ul>
+						<li>常见问题</li>
+						<li>如何下单</li>
+						<li>支付方式</li>
+						<li>联系客服</li>
+						<li>服务条款</li>
+					</ul>
+
+				</div>
+				<div class="foot2">
+					<div class="foots-title">关于我们
+					</div>
+
+					<ul>
+						<li>徽夫简介</li>
+						<li>联系我们</li>
+						<li>加入我们</li>
+						<li>友情链接</li>
+					</ul>
+
+				</div>
+				<div class="foot3">
+					<div class="foots-title">联系我们
+					</div>
+
+					<ul>
+						<li>QQ：123245678</li>
+						<li>电话：0571-88888888</li>
+						<li></li>
+						<li></li>
+					</ul>
+
+				</div>
+			</div>
+			<p class="bottom" style="clear: both;width: 300px; margin: 0 auto; color: #FFFFFF;">
+				Copyright © 2015 版权所有 All rights reserved.
+			</p>
+		</div>
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function setTab(index){ 
+			for(var i=1; i<=4; i++){ 
+			var aform = document.getElementById("form"+i); 
+			if(i==index){ 
+			aform.style.display="block"; 
+			} 
+			else{ 
+			aform.style.display="none"; 
+			} 
+			} 
+			} 
+$(document).ready(function(){
+
+var datas=[{"id":1,"name":"苹果"},{"id":2,"name":"三星"}];
+$.each(datas, function(i,value){
+$("#pinpai").append("<option value='"+value.id+"'>"+value.name+"</option>");
+});	
+});
+
+
+$("#pinpai").change(function(){
+//  htmlobj=$.getJSON({url:"",async:false}).responseText;
+var htmlobj=[{"id":1,"name":"aaa"},{"id":2,"name":"bbb"}]
+
+$.each(htmlobj, function(n,value) {    
+$("#xinghao").append("<option value='"+value.id+"'>"+value.name+"</option>");                                                          
+                                                          
+});
+});
+
+
+		</script>
+
+	</body>
+
+</html>

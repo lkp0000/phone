@@ -1,0 +1,80 @@
+	body {
+				font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+				font-size: 14px;
+			}
+			a {
+				text-decoration: none;
+			}
+			li {
+				list-style: none;
+				float: left;
+			}
+			.navs ul li {
+				background-color: #D9DEE4;
+				padding: 6px 12px;
+				line-height: 20px;
+				margin-left: 2px;
+			}
+			.navs ul li a {
+				color: #666;
+			}
+			.title {
+				width: 100%;
+				height: 50px;
+				border-bottom: 1px solid #B2B2B2;
+			}
+			.title span {
+				line-height: 40px;
+				margin-left: 10px;
+				padding-left: 5px;
+				border-left: 2px solid #09C;
+			}
+			.list {
+				clear: both;
+				padding-top: 20px;
+			}
+			.list table {
+				border: 1px;
+				border-collapse: collapse;
+				border-color: gray;
+				width: 90%;
+				margin: 0 auto;
+				line-height: 30px;
+				color: #808080;
+			}
+			th,
+			td {
+				border: 0px;
+				padding: 0px 5px;
+			}
+			th {
+				font-weight: 500;
+				background-color: #F5F6FA;
+				text-align: left;
+			}
+			tr {
+				border: 1px solid #E1E6EB;
+			}
+			.ctrl li {
+				padding: 5px 10px;
+				border: 1px solid #808080;
+				height: 20px;
+				line-height: 20px;
+				font-size: 10px;
+			}
+		.new form{
+			width: 373px;	
+		margin-left: 40%;
+			}
+			input{
+				
+				margin-bottom: 5px;
+			}
+			.ok{
+				background-color: #0099CC;
+				padding: 3px 73px;
+				width: 100%;
+				border: 0;
+				color: white;
+			}
+	

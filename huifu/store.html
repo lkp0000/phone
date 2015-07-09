@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel='stylesheet' href='css/style.css' media='screen' />
+     	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	   <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/html5.js"></script>
+        <script src="js/blocksit.min.js"></script>
+        <script>
+$(document).ready(function() {
+
+	//blocksit define
+	$(window).load( function() {
+		$('#container').BlocksIt({
+			numOfCol: 5,
+			offsetX: 8,
+			offsetY: 8
+		});
+	});
+	
+	//window resize
+	var currentWidth = 1100;
+	$(window).resize(function() {
+		var winWidth = $(window).width();
+		var conWidth;
+		if(winWidth < 660) {
+			conWidth = 440;
+			col = 2
+		} else if(winWidth < 880) {
+			conWidth = 660;
+			col = 3
+		} else if(winWidth < 1100) {
+			conWidth = 880;
+			col = 4;
+		} else {
+			conWidth = 1100;
+			col = 5;
+		}
+		
+		if(conWidth != currentWidth) {
+			currentWidth = conWidth;
+			$('#container').width(conWidth);
+			$('#container').BlocksIt({
+				numOfCol: col,
+				offsetX: 8,
+				offsetY: 8
+			});
+		}
+	});
+});
+</script>
+<style type="text/css">
+/*瀑布流布局样式*/
+#lxf-box { position: relative;width: 100%; }
+#lxf-box li { position: absolute; background: #fff; border: solid 1px #ccc; text-align: center; padding: 10px; left: 0px; top: 0; }
+h3 { padding-top: 8px; }
+img { width: 200px; height: auto; display: block; border: 0 }
+/*css3动画*/
+li { -webkit-transition: all .7s ease-out .1s; -moz-transition: all .7s ease-out; -o-transition: all .7s ease-out .1s; transition: all .7s ease-out .1s }
+</style>	</head>
+	<body>
+	<div class="header">
+			<div class="wrapper">
+				
+					<a href="index.html" class="logo" style="color: #FFFFFF;">徽夫</a>
+				
+			<div class="navs" style="height:60px;">
+					<ul>
+						<li><a href="index.html">首页</a>
+						</li>
+						<li><a href="repair.html">维修</a>
+						</li>
+						<li><a href="store.html">手机商城</a>
+						</li>
+						<li><a href="exchange.html">以旧换新</a>
+						</li>
+						<li><a href="user.html">订单查询</a>
+						</li>
+
+						<li><a href="about.html">关于我们</a>
+						</li>
+
+					</ul>
+				</div>
+					
+<ul class="logins">
+	<li>	<div class="login">
+						<a href="login.html">登录</a>
+					</div></li>
+					<li>
+					
+					<div class="signup">
+						<a href="signup.html">注册</a>
+					</div>
+					</li>
+</ul>
+				
+			
+			
+			</div>
+		</div>
+		<div class="main">	
+			<div class="wrapper">
+<div id="container">
+	<div class="grid">
+		<div class="imgholder">
+			<img src="images/img27.jpg" />
+		</div>
+		<strong>日落湖</strong>
+		<p>和平日落景观......</p>
+		<div class="meta">2013年6月6日</div>
+	</div>
+	<div class="grid">
+		<div class="imgholder">
+			<img src="images/img26.jpg" />
+		</div>
+		<strong>天国的桥梁</strong>
+		<p>桥在哪里？</p>
+		<div class="meta">by SigitEko</div>
+	</div>
+	<div class="grid">
+		<div class="imgholder">
+			<img src="images/img15.jpg" />
+		</div>
+		<strong>秋</strong>
+		<p>秋天的树...</p>
+		<div class="meta">by Lars van de Goor</div>
+	</div>
+	<div class="grid">
+		<div class="imgholder">
+			<img src="images/img23.jpg" />
+		</div>
+		<strong>冬季耳语</strong>
+		<p>冬天的感觉...</p>
+</div>
+	<div class="grid">
+		<div class="imgholder">
+			<img src="images/img17.jpg" />
+		</div>
+		<strong>Light</strong>
+		<p>The only shinning light...</p>
+	</div>
+	<div class="grid">
+		<div class="imgholder">
+			<img src="images/img22.jpg" />
+		</div>
+		<strong>Rooster's Ranch</strong>
+		<p>Rooster's ranch landscape...</p>
+	</div>
+	<div class="grid">
+		<div class="imgholder">
+			<img src="images/img16.jpg" />
+		</div>
+		<strong>Autumn Light</strong>
+		<p>Sun shinning into forest...</p>
+	</div>
+	<div class="grid">
+		<div class="imgholder">
+			<img src="images/img21.jpg" />
+		</div>
+		<strong>Yellow cloudy</strong>
+		<p>It is yellow cloudy...</p>
+	</div>
+	<div class="grid">
+		<div class="imgholder">
+			<img src="images/img28.jpg" />
+		</div>
+		<strong>Herringfleet Mill</strong>
+		<p>Just a herringfleet mill...</p>
+		<div class="meta">by Ian Flindt</div>
+	</div>
+
+</div>
+</div>
+</div>
+		<div class="footer">
+			<div class="wrapper" style="height: 230px;">
+				<div class="foot1">
+					<div class="foots-title">使用指南
+					</div>
+					<ul>
+						<li>常见问题</li>
+						<li>如何下单</li>
+						<li>支付方式</li>
+						<li>联系客服</li>
+						<li>服务条款</li>
+					</ul>
+
+				</div>
+				<div class="foot2">
+					<div class="foots-title">关于我们
+					</div>
+
+					<ul>
+						<li>徽夫简介</li>
+						<li>联系我们</li>
+						<li>加入我们</li>
+						<li>友情链接</li>
+					</ul>
+
+				</div>
+				<div class="foot3">
+					<div class="foots-title">联系我们
+					</div>
+
+					<ul>
+						<li>QQ：123245678</li>
+						<li>电话：0571-88888888</li>
+						<li></li>
+						<li></li>
+					</ul>
+
+				</div>
+			</div>
+			<p class="bottom" style="clear: both;width: 300px; margin: 0 auto; color: #FFFFFF;">
+				Copyright © 2015 版权所有 All rights reserved.
+			</p>
+		</div>
+		
+		
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".imgholder").click(function(){
+				
+				this.style.filter='fliph';
+			
+			});
+			
+			
+		});
+	</script>	
+		
+	</body>
+</html>
